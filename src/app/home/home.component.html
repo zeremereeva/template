@@ -1,0 +1,86 @@
+<header class="header">
+  <app-nav></app-nav>
+  <section class="boss">
+    <div class="menu">
+      <ul class="menu-list">
+        <li class="menu-list-item" *ngFor="let category of categories">
+          <img
+            class="arrow"
+            class="logo__img"
+            src="/assets/images/chevron_right.png"
+            alt=""
+          />{{ category }}
+        </li>
+      </ul>
+    </div>
+    <div class="photo-menu">
+      <section class="flex">
+        <div class="form-group">
+          <div class="select-wrapper">
+            <select name="select-category" class="select">
+              <option value="1">Подешевле</option>
+              <option value="2">Подороже</option>
+              <option value="3">Популярные</option>
+              <option value="4">Новые</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="select-wrapper">
+            <select name="select-category" class="select">
+              <option value="1">Подешевле</option>
+              <option value="2">Подороже</option>
+              <option value="3">Популярные</option>
+              <option value="4">Новые</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="select-wrapper">
+            <select name="select-category" class="select">
+              <option value="1">Подешевле</option>
+              <option value="2">Подороже</option>
+              <option value="3">Популярные</option>
+              <option value="4">Новые</option>
+            </select>
+          </div>
+        </div>
+        <div class="mytabs">
+          <input type="radio" id="tabshow" name="mytabs" checked="checked" />
+          <label for="tabshow">Show all</label>
+
+          <input type="radio" id="tabauction" name="mytabs" checked="checked" />
+          <label for="tabauction">Auction</label>
+
+          <input type="radio" id="tabbuy" name="mytabs" checked="checked" />
+          <label for="tabbuy">Buy now</label>
+        </div>
+        <div class="myf">
+          <input type="radio" id="tabf1" name="myf" checked="checked" />
+          <label
+            for="tabf1">
+            <img
+            class="forma"
+            src="/assets/images/view1.svg"
+            alt=""
+          ></label>
+          <input type="radio" id="tabf2" name="myf" checked="checked" />
+          <label
+            for="tabf2">
+            <img
+            class="forma"
+            src="/assets/images/view2.svg"
+            alt=""
+          ></label>
+        </div>
+      </section>
+      <ul class="menup">
+        <li class="photos" *ngFor="let task of tasks">
+          <img class="photo" src="{{ task.image }}" />
+          <span>{{ task.title }} </span>
+          <span class="price">{{ task.price }}</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+</header>

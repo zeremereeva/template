@@ -1,0 +1,10 @@
+<nav class="menu">
+  <ul class="menu-picture">
+    <li class="menu-pic-item" *ngFor="let array of arrays">
+      <a class="menu-pic-link">
+        <img class="image" src={{array.image}} />
+        {{ array.title }}
+      </a>
+    </li>
+  </ul>
+</nav>
